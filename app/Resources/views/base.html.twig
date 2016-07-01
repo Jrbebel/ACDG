@@ -1,89 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Bienvenue à l'ACDG</title>
 
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<head>
+    <title>Bienvenue à l'ACDG</title>
 
-        <!-- Stylesheets -->
-        {% stylesheets 'css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
-        {% javascripts 'js/jquery-1.7.1.min.js' %}
-        <script src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-        {#        <link rel="stylesheet" type="text/css" href="stylesheets/flexslider.css" />
-                <link rel="stylesheet" type="text/css" href="stylesheets/tipsy.css" />
-                <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
-                <link rel="stylesheet" type="text/css" href="stylesheets/media.queries.css" />#}
-        <link rel="stylesheet" type="text/css" href="{{asset('bundles/app/js/fancybox/jquery.fancybox-1.3.4.css')}}" />
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico|Cabin:400,700,600,500">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <!-- Javascripts -->
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery-1.7.1.min.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/html5shiv.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.tipsy.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/fancybox/jquery.fancybox-1.3.4.pack.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/fancybox/jquery.easing-1.3.pack.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.mobilemenu.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.infieldlabel.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.twitter.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.quicksand.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/jquery.flexslider-min.js")}}></script>
-        <script type="text/javascript" src={{asset("bundles/app/js/advocate.js")}}></script>
+    <!-- Stylesheets -->
+    {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
 
-        <!-- Favicons -->
-        <link rel="shortcut icon" href="images/favicon.png" />
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="{{ asset_url }}" /> 
+    
+    {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico|Cabin:400,700,600,500">
+    
+    <!-- javascripts -->
+    {% javascripts 'bundles/app/js/jquery-1.7.1.min.js' 'bundles/app/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
-    </head>
-    <body>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-        <header>
-            <div class="container">		
-                <!-- Start Navigation -->
-                <nav>
-                    <ul>
-                        <li class="current-menu-item"><a href="index.html">Acceuil</a></li>
-                        <li><a href="about.html">A propos</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="events_list.html">Evenements</a></li>
-                        <li>
-                            <a href="#">Gallery</a>
-                            <ul>
-                                <li><a href="gallery_2_columns.html">Gallery 2 Columns</a></li>
-                                <li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
-                                <li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>
-                                <li>
-                                    <a href="#">Gallery With Sidebar &rarr;</a>
-                                    <ul>
-                                        <li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>
-                                        <li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>
-                                        <li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="donate.html">Donation</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="styles.html">Styles</a></li>
-                    </ul>
-                </nav>
-                <!-- End Navigation -->
+</head>
 
-                <!-- Start Social Icons -->
-                <aside>
-                    <ul class="social icon">
-                        <li><a href="" title="Twitter">a</a></li>
-                        <li><a href="" title="Facebook">v</a></li>
-                        <li><a href="" title="Flickr">d</a></li>
-                        <li><a href="" title="Vimeo">c</a></li>
-                        <li><a href="" title="Google">t</a></li>
-                        <li><a href="" title="RSS">b</a></li>
-                        <!-- More Social Icons:
+<body>
+
+    <header>
+        <div class="container">
+            <!-- Start Navigation -->
+            <nav>
+                <ul>
+                    <li class="current-menu-item"><a href="index.html">Acceuil</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="events_list.html">Evenements</a></li>
+                    <li>
+                        <a href="#">Gallery</a>
+                        <ul>
+                            <li><a href="gallery_2_columns.html">Gallery 2 Columns</a></li>
+                            <li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
+                            <li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>
+                            <li>
+                                <a href="#">Gallery With Sidebar &rarr;</a>
+                                <ul>
+                                    <li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>
+                                    <li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>
+                                    <li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="donate.html">Donation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="styles.html">Styles</a></li>
+                </ul>
+            </nav>
+            <!-- End Navigation -->
+
+            <!-- Start Social Icons -->
+            <aside>
+                <ul class="social icon">
+                    <li><a href="" title="Twitter">a</a></li>
+                    <li><a href="" title="Facebook">v</a></li>
+                    <li><a href="" title="Flickr">d</a></li>
+                    <li><a href="" title="Vimeo">c</a></li>
+                    <li><a href="" title="Google">t</a></li>
+                    <li><a href="" title="RSS">b</a></li>
+                    <!-- More Social Icons:
                         <li><a href="" title="Picasa">e</a></li>
                         <li><a href="" title="dribbble">f</a></li>
                         <li><a href="" title="Forrst">g</a></li>
@@ -102,46 +89,48 @@
                         <li><a href="" title="Mail">u</a></li>
                         <li><a href="" title="Google">w</a></li>
                         -->
-                    </ul>
-                </aside>
-                <!-- End Social Icons -->
-            </div>		
-        </header>
+                </ul>
+            </aside>
+            <!-- End Social Icons -->
+        </div>
+    </header>
 
-        <section class="page_heading home">
-            <div class="logo container">
-                <a href="">ACDG</a>			
-                <span class="tagline">L'Association Culturelle Du Gommier</span>
-            </div>
-        </section>
+    <section class="page_heading home">
+        <div class="logo container">
+            <a href="">ACDG</a>
+            <span class="tagline">L'Association Culturelle Du Gommier</span>
+        </div>
+    </section>
 
-        <!-- Start Home -->
-        <div id="home" class="page_wrapper">
+    <!-- Start Home -->
+    <div id="home" class="page_wrapper">
 
-            <!-- Start Container -->
-            <section class="container">
+        <!-- Start Container -->
+        <section class="container">
 
-                <!-- Start Page -->
-                <div class="page">
+            <!-- Start Page -->
+            <div class="page">
 
-                    <!-- Start Slider -->
-                    <div class="flexslider-container">
-                        <div id="slider" class="flexslider">
-                            <ul class="slides">
-                                <li>
-                                    <img src="{{asset('bundles/app/img/content/slide-1.jpg')}}" alt="" />
-                                    <p class="flex-caption">
-                                        <b>Danse traditionelle gwo ka</b> - Prestation des plus petites pour la fête de la commune de pointe noire.
-                                    </p>
-                                </li>
-                                <li>
-                                    <img src="{{asset('bundles/app/img/content/slide-2.jpg')}}" alt="" />
-                                    <p class="flex-caption">
-                                        <b>Protect Our Coral Reefs</b> - This slider is also responsive,  so your visitors see your site exactly as intended, no matter what device they're using.
-                                    </p>								
-                                </li>
-            <!--                    <li>
-                                    <img src="{{asset('bundles/app/img/content/slide-3.jpg')}}" alt="" />
+                <!-- Start Slider -->
+                <div class="flexslider-container">
+                    <div id="slider" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="{{asset('bundles/app/img/content/slide-1.jpg')}}" alt="slide1" />
+                                <p class="flex-caption">
+                                    <b>Danse traditionelle gwo ka</b> - Prestation des plus petites pour la fête de la commune
+                                    de pointe noire.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="{{asset('bundles/app/img/content/slide-2.jpg')}}" alt="slide2" />
+                                <p class="flex-caption">
+                                    <b>Protect Our Coral Reefs</b> - This slider is also responsive, so your visitors see
+                                    your site exactly as intended, no matter what device they're using.
+                                </p>
+                            </li>
+                            <!--                    <li>
+                                    <img src="{{asset('images/content/slide-3.jpg')}}" alt="" />
                                     <p class="flex-caption">
                                         <b>Plant a Tree</b> - Advocate theme features unlimited color options and Google fonts making it easy to customize to your unique purpose.
                                     </p>
@@ -152,23 +141,25 @@
                                         <b>Save the Rainforest</b> - Bring awareness to your cause with style and function. 
                                     </p>
                                 </li>-->
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
-                    <!-- End Slider -->
+                </div>
+                <!-- End Slider -->
 
-                    <div class="sub_heading">
-                        <h2>Rejoignez nous</h2>
-                        <span class="line"></span>
-                    </div>
+                <div class="sub_heading">
+                    <h2>Rejoignez nous</h2>
+                    <span class="line"></span>
+                </div>
+                <div id="revolution_wrap" class="full">
                     <div id="revolution_wrap" class="full">
-		<div id="revolution_wrap" class="full">
-					<div id="description" class="one_third">
-						<h3>Association culturelles du gommiers.</h3>
-                        <p>L’Association Culturelle Des Gommiers (ACDG), est une association de <span class="color">danse traditionnelle de GWO KA,</span>
-                            fondée le 03 février 1980 à Gommier Pointe-Noire,GUADELOUPE. Elle propose à ses adhérents plusieurs secteurs d’activités à savoir le Carnaval, le Théâtre, l’animation de sa section et de sa commune, des chantés nwel (chanter noël), des sorties culturelles, ainsi que des soirées.</p>
-						
-					</div>
+                        <div id="description" class="one_third">
+                            <h3>Association culturelles du gommiers.</h3>
+                            <p>L’Association Culturelle Des Gommiers (ACDG), est une association de <span class="color">danse traditionnelle de GWO KA,</span>                                fondée le 03 février 1980 à Gommier Pointe-Noire,GUADELOUPE. Elle propose à ses adhérents
+                                plusieurs secteurs d’activités à savoir le Carnaval, le Théâtre, l’animation de sa section
+                                et de sa commune, des chantés nwel (chanter noël), des sorties culturelles, ainsi que des
+                                soirées.</p>
+
+                        </div>
 
                         <!-- Start Actions -->
                         <div id="actions">
@@ -178,7 +169,8 @@
                                         <span class="icon general-enclosed">2</span>
                                         <h4>Théâtre</h4>
                                     </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
+                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
+                                        dapibus posuere.</p>
                                 </div>
                             </div>
                             <div class="box one_half column_last">
@@ -187,17 +179,19 @@
                                         <span class="icon general-enclosed">o</span>
                                         <h4>Gwo Ka</h4>
                                     </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
+                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
+                                        dapibus posuere.</p>
                                 </div>
                             </div>
                             <div class="box one_half">
-                                
+
                                 <div class="inner">
                                     <div class="box_heading">
                                         <span class="icon general-enclosed">~</span>
                                         <h4>Carnaval</h4>
                                     </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
+                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
+                                        dapibus posuere.</p>
                                 </div>
                             </div>
                             <div class="box one_half column_last">
@@ -206,11 +200,12 @@
                                         <span class="icon general-enclosed">l</span>
                                         <h4>Danse modern</h4>
                                     </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere.</p>
+                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
+                                        dapibus posuere.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Actions -->		
+                        <!-- End Actions -->
                     </div>
 
 
@@ -223,9 +218,9 @@
                         </div>
                         <a href="#" class="donate_button">Donate Now!</a>
                     </div>
-                    <!-- End Help -->		
+                    <!-- End Help -->
 
-                    <!-- Start Items -->		
+                    <!-- Start Items -->
                     <div id="items">
 
                         <!-- Start News -->
@@ -248,7 +243,7 @@
                                     <p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
                                 </li>
 
-                            </ul>						
+                            </ul>
                         </div>
                         <!-- End News -->
 
@@ -258,7 +253,7 @@
                                 <h2>Evenements</h2>
                                 <span class="line"></span>
                             </div>
-                            <ul>	
+                            <ul>
                                 <li>
                                     <div class="date"><span>23</span> Juin</div>
                                     <div class="details">
@@ -316,8 +311,8 @@
                 </div>
                 <!-- End Page -->
 
-            </section>
-            <!-- End Container -->
+        </section>
+        <!-- End Container -->
 
         </div>
         <!-- End Home -->
@@ -358,9 +353,8 @@
                     <h5>Adresse</h5>
                     <div class="location_widget">
                         <p>
-                            Association Culturelle Des Gommiers<br/>
-                            Gommiers<br/>
-                            97116 Pointe-Noire
+                            Association Culturelle Des Gommiers<br/> Gommiers
+                            <br/> 97116 Pointe-Noire
                         </p>
                         <p>
                             <span class="icon general">r</span> 0590 981 605 <br/>
@@ -377,5 +371,6 @@
             </div>
         </footer>
 
-    </body>
+</body>
+
 </html>
