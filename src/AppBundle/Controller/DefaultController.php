@@ -8,16 +8,41 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    
+
     /**
      * @Route("/", name="home")
-     * 
+     *
      */
-    public function IndexAction() {
-        
-        return $this->render("/default/index.html.twig");
-        
+    public function IndexAction()
+    {
+
+        return $this->render("@App/default/index.html.twig");
+
     }
-    
-    
+
+    /**
+     * @Route("/evenement" , name="evenement" )
+     * */
+    public function EvenementAction()
+    {
+
+        return $this->render("@App/default/evenement.html.twig");
+    }
+
+    /**
+     *
+     * @Route("/contact", name="contact")
+     */
+    public function ContactAction()
+    {
+        return $this->render("@App/default/contact.html.twig");
+    }
+
+
+    /**
+     * @Route("/about",name="about")
+     */
+    public function AboutAction(){
+        return $this->render("@App/default/about.html.twig");
+    }
 }

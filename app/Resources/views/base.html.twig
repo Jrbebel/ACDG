@@ -4,23 +4,23 @@
 <head>
     <title>Bienvenue à l'ACDG</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <!-- Stylesheets -->
     {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
 
-    <link rel="stylesheet" href="{{ asset_url }}" /> 
-    
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+
     {% endstylesheets %}
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico|Cabin:400,700,600,500">
-    
+
     <!-- javascripts -->
     {% javascripts 'bundles/app/js/jquery-1.7.1.min.js' 'bundles/app/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png"/>
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -29,347 +29,129 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <!-- Start Navigation -->
-            <nav>
-                <ul>
-                    <li class="current-menu-item"><a href="index.html">Acceuil</a></li>
-                    <li><a href="about.html">A propos</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="events_list.html">Evenements</a></li>
-                    <li>
-                        <a href="#">Gallery</a>
-                        <ul>
-                            <li><a href="gallery_2_columns.html">Gallery 2 Columns</a></li>
-                            <li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
-                            <li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>
-                            <li>
-                                <a href="#">Gallery With Sidebar &rarr;</a>
-                                <ul>
-                                    <li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>
-                                    <li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>
-                                    <li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="donate.html">Donation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="styles.html">Styles</a></li>
-                </ul>
-            </nav>
-            <!-- End Navigation -->
+<header>
+    <div class="container">
+        <!-- Start Navigation -->
+        <nav>
+            <ul>
+                <li class="current-menu-item"><a href="{{ path("home") }}">Acceuil</a></li>
+                <li><a href="{{ path("about") }}">A propos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="{{ path("evenement") }}">Evenements</a></li>
+                <li>
+                    <a href="#">Gallery</a>
+                    <ul>
+                        <li><a href="gallery_2_columns.html">Gallery 2 Columns</a></li>
+                        <li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
+                        <li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>
+                        <li>
+                            <a href="#">Gallery With Sidebar &rarr;</a>
+                            <ul>
+                                <li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>
+                                <li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>
+                                <li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="donate.html">Donation</a></li>
+                <li><a href="{{ path("contact") }}">Contact</a></li>
+              {#  <li><a href="styles.html">Styles</a></li>#}
+            </ul>
+        </nav>
+        <!-- End Navigation -->
 
-            <!-- Start Social Icons -->
-            <aside>
-                <ul class="social icon">
-                    <li><a href="" title="Twitter">a</a></li>
-                    <li><a href="" title="Facebook">v</a></li>
-                    <li><a href="" title="Flickr">d</a></li>
-                    <li><a href="" title="Vimeo">c</a></li>
-                    <li><a href="" title="Google">t</a></li>
-                    <li><a href="" title="RSS">b</a></li>
-                    <!-- More Social Icons:
-                        <li><a href="" title="Picasa">e</a></li>
-                        <li><a href="" title="dribbble">f</a></li>
-                        <li><a href="" title="Forrst">g</a></li>
-                        <li><a href="" title="deviantART">h</a></li>
-                        <li><a href="" title="WordPress">i</a></li>
-                        <li><a href="" title="Blogger">j</a></li>
-                        <li><a href="" title="Yahoo!">k</a></li>
-                        <li><a href="" title="Amazon">l</a></li>
-                        <li><a href="" title="LinkedIn">m</a></li>
-                        <li><a href="" title="Last.fm">n</a></li>
-                        <li><a href="" title="StumbleUpon">o</a></li>
-                        <li><a href="" class="Pinterest">p</a></li>
-                        <li><a href="" title="Xing">q</a></li>
-                        <li><a href="" title="SoundCloud">r</a></li>
-                        <li><a href="" title="Delicious">s</a></li>
-                        <li><a href="" title="Mail">u</a></li>
-                        <li><a href="" title="Google">w</a></li>
-                        -->
-                </ul>
-            </aside>
-            <!-- End Social Icons -->
+        <!-- Start Social Icons -->
+        <aside>
+            <ul class="social icon">
+                <li><a href="" title="Twitter">a</a></li>
+                <li><a href="" title="Facebook">v</a></li>
+                <li><a href="" title="Flickr">d</a></li>
+                <li><a href="" title="Vimeo">c</a></li>
+                <li><a href="" title="Google">t</a></li>
+                <li><a href="" title="RSS">b</a></li>
+                <!-- More Social Icons:
+                    <li><a href="" title="Picasa">e</a></li>
+                    <li><a href="" title="dribbble">f</a></li>
+                    <li><a href="" title="Forrst">g</a></li>
+                    <li><a href="" title="deviantART">h</a></li>
+                    <li><a href="" title="WordPress">i</a></li>
+                    <li><a href="" title="Blogger">j</a></li>
+                    <li><a href="" title="Yahoo!">k</a></li>
+                    <li><a href="" title="Amazon">l</a></li>
+                    <li><a href="" title="LinkedIn">m</a></li>
+                    <li><a href="" title="Last.fm">n</a></li>
+                    <li><a href="" title="StumbleUpon">o</a></li>
+                    <li><a href="" class="Pinterest">p</a></li>
+                    <li><a href="" title="Xing">q</a></li>
+                    <li><a href="" title="SoundCloud">r</a></li>
+                    <li><a href="" title="Delicious">s</a></li>
+                    <li><a href="" title="Mail">u</a></li>
+                    <li><a href="" title="Google">w</a></li>
+                    -->
+            </ul>
+        </aside>
+        <!-- End Social Icons -->
+    </div>
+</header>
+
+</section>
+        {% block body %}
+
+        {% endblock body %}
+<footer>
+    <div class="container">
+        <div class="widget one_fourth">
+            <h2 class="logo">ACDG</h2>
+            <p>ACDG,association culturelle du gommier</p>
         </div>
-    </header>
+        <div class="widget one_fourth">
+            <h5>Twitter</h5>
 
-    <section class="page_heading home">
-        <div class="logo container">
-            <a href="">ACDG</a>
-            <span class="tagline">L'Association Culturelle Des Gommiers</span>
-        </div>
-    </section>
-
-    <!-- Start Home -->
-    <div id="home" class="page_wrapper">
-
-        <!-- Start Container -->
-        <section class="container">
-
-            <!-- Start Page -->
-            <div class="page">
-
-                <!-- Start Slider -->
-                <div class="flexslider-container">
-                    <div id="slider" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <img src="{{asset('bundles/app/img/content/slide-1.jpg')}}" alt="slide1" />
-                                <p class="flex-caption">
-                                    <b>Danse traditionelle gwo ka</b> - Prestation des plus petites pour la fête de la commune
-                                    de pointe noire.
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{asset('bundles/app/img/content/slide-2.jpg')}}" alt="slide2" />
-                                <p class="flex-caption">
-                                    <b>Protect Our Coral Reefs</b> - This slider is also responsive, so your visitors see
-                                    your site exactly as intended, no matter what device they're using.
-                                </p>
-                            </li>
-                            <!--                    <li>
-                                    <img src="{{asset('images/content/slide-3.jpg')}}" alt="" />
-                                    <p class="flex-caption">
-                                        <b>Plant a Tree</b> - Advocate theme features unlimited color options and Google fonts making it easy to customize to your unique purpose.
-                                    </p>
-                                </li>
-                                <li>
-                                    <img src="{{asset('bundles/app/img/content/slide-4.jpg')}}" alt="" />
-                                    <p class="flex-caption">
-                                        <b>Save the Rainforest</b> - Bring awareness to your cause with style and function. 
-                                    </p>
-                                </li>-->
-                        </ul>
-                    </div>
-                </div>
-                <!-- End Slider -->
-
-                <div class="sub_heading">
-                    <h2>Rejoignez nous</h2>
-                    <span class="line"></span>
-                </div>
-                <div id="revolution_wrap" class="full">
-                    <div id="revolution_wrap" class="full">
-                        <div id="description" class="one_third">
-                            <h3>Association culturelle des gommiers.</h3>
-                            <p>L’Association Culturelle Des Gommiers (ACDG), est une association de <span class="color">danse traditionnelle de GWO KA,</span>                                fondée le 03 février 1980 à Gommier Pointe-Noire,GUADELOUPE. Elle propose à ses adhérents
-                                plusieurs secteurs d’activités à savoir le Carnaval, le Théâtre, l’animation de sa section
-                                et de sa commune, des chantés nwel (chanter noël), des sorties culturelles, ainsi que des
-                                soirées.</p>
-
-                        </div>
-
-                        <!-- Start Actions -->
-                        <div id="actions">
-                            <div class="box one_half">
-                                <div class="inner">
-                                    <div class="box_heading">
-                                        <span class="icon general-enclosed">d</span>
-                                        <h4>Théâtre</h4>
-                                    </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
-                                        dapibus posuere.</p>
-                                </div>
-                            </div>
-                            <div class="box one_half column_last">
-                                <div class="inner">
-                                    <div class="box_heading">
-                                        <span class="icon general-enclosed">d</span>
-                                        <h4>GwoKa</h4>
-                                    </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
-                                        dapibus posuere.</p>
-                                </div>
-                            </div>
-                            <div class="box one_half">
-
-                                <div class="inner">
-                                    <div class="box_heading">
-                                        <span class="icon general-enclosed">d</span>
-                                        <h4>Carnaval</h4>
-                                    </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
-                                        dapibus posuere.</p>
-                                </div>
-                            </div>
-                            <div class="box one_half column_last">
-                                <div class="inner">
-                                    <div class="box_heading">
-                                        <span class="icon general-enclosed">d</span>
-                                        <h4>Danse modern</h4>
-                                    </div>
-                                    <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis
-                                        dapibus posuere.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Actions -->
-                    </div>
-
-
-                    <!-- Start Help -->
-                    <div id="help" class="framed_box">
-                        <span class="icon general">l</span>
-                        <div class="text">
-                            <h3>Vous souhaitez nous rejoindre?</h3>
-                            <span class="color">Remplissez le formulaire de contact,et participez à nos différentes activités.</span>
-                        </div>
-                        <a href="#" class="donate_button">Rejoingnez nous!</a>
-                    </div>
-                    <!-- End Help -->
-
-                    <!-- Start Items -->
-                    <div id="items">
-
-                        <!-- Start News -->
-                        <div class="news one_third">
-                            <div class="box_heading">
-                                <h2>Blog</h2>
-                                <span class="line"></span>
-                            </div>
-                            <ul>
-                                <li>
-                                    <h5><a href="blog_single.html">Save The Whales</a></h5>
-                                    <p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
-                                </li>
-                                <li>
-                                    <h5><a href="blog_single.html">Vote Superman for President</a></h5>
-                                    <p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
-                                </li>
-                                <li>
-                                    <h5><a href="blog_single.html">Protect Our Coral Reefs</a></h5>
-                                    <p>Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl.</p>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <!-- End News -->
-
-                        <!-- Start Events -->
-                        <div class="events one_third">
-                            <div class="box_heading">
-                                <h2>Evenements</h2>
-                                <span class="line"></span>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="date"><span>23</span> Juin</div>
-                                    <div class="details">
-                                        <h5><a href="event_description.html">Rainforest Protection Meeting</a></h5>
-                                        <p>6pm @ Golden State Park</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date"><span>22</span> May</div>
-                                    <div class="details">
-                                        <h5><a href="event_description.html">Green Energy Conference</a></h5>
-                                        <p>2pm @ Menlo Park</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date"><span>21</span> May</div>
-                                    <div class="details">
-                                        <h5><a href="event_description.html">Organic Pot Luck Night!</a></h5>
-                                        <p>6pm @ Santa clara University</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date"><span>18</span> May</div>
-                                    <div class="details">
-                                        <h5><a href="event_description.html">Beach Clean Up</a></h5>
-                                        <p>10am @ Venice Beach</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End Events -->
-
-                        <!-- Start Sponsors -->
-                        <div id="sponsors" class="one_third column_last">
-                            <div class="box_heading">
-                                <h2>Nos Sponsors</h2>
-                                <span class="line"></span>
-                            </div>
-                            <ul>
-                                <li><img src="images/content/sponsor-1.png" alt="Sponsor 1" /></li>
-                                <li class="last"><img src="images/content/sponsor-2.png" alt="Sponsor 2" /></li>
-                                <li><img src="images/content/sponsor-3.png" alt="Sponsor 3" /></li>
-                                <li class="last"><img src="images/content/sponsor-4.png" alt="Sponsor 4" /></li>
-                                <li><img src="images/content/sponsor-5.png" alt="Sponsor 5" /></li>
-                                <li class="last"><img src="images/content/sponsor-6.png" alt="Sponsor 6" /></li>
-                                <li class="bottom"><img src="images/content/sponsor-9.png" alt="Sponsor 9" /></li>
-                                <li class="bottom last"><img src="images/content/sponsor-7.png" alt="Sponsor 7" /></li>
-                            </ul>
-                        </div>
-                        <!-- End Sponsors -->
-
-                    </div>
-                    <!-- End Items -->
-
-                </div>
-                <!-- End Page -->
-
-        </section>
-        <!-- End Container -->
+            <div class="twitter_stream"></div>
 
         </div>
-        <!-- End Home -->
+        <div class="widget one_fourth">
+            <h5>Newsletter</h5>
 
-        <footer>
-            <div class="container">
-                <div class="widget one_fourth">
-                    <h2 class="logo">ACDG</h2>
-                    <p>ACDG,association culturelle du gommier</p>
-                </div>
-                <div class="widget one_fourth">
-                    <h5>Twitter</h5>
+            <form action="javascript:;" method="post">
 
-                    <div class="twitter_stream"></div>
+                <p>Reçois les news de l'ACDG.</p>
 
-                </div>
-                <div class="widget one_fourth">
-                    <h5>Newsletter</h5>
+                <p>
+                    <label for="name">Name *</label>
+                    <input type="text" name="name" id="name" value=""/>
+                </p>
+                <p>
+                    <label for="email">Email *</label>
+                    <input type="text" name="email" id="email" value=""/>
+                </p>
 
-                    <form action="javascript:;" method="post">
+                <input type="submit" class="button white" value="Signup &#x2192;"/>
 
-                        <p>Reçois les news de l'ACDG.</p>
-
-                        <p>
-                            <label for="name">Name *</label>
-                            <input type="text" name="name" id="name" value="" />
-                        </p>
-                        <p>
-                            <label for="email">Email *</label>
-                            <input type="text" name="email" id="email" value="" />
-                        </p>
-
-                        <input type="submit" class="button white" value="Signup &#x2192;" />
-
-                    </form>
-                </div>
-                <div class="widget one_fourth column_last">
-                    <h5>Adresse</h5>
-                    <div class="location_widget">
-                        <p>
-                            Association Culturelle Des Gommiers<br/> Gommiers
-                            <br/> 97116 Pointe-Noire
-                        </p>
-                        <p>
-                            <span class="icon general">r</span> 0590 981 605 <br/>
-                            <span class="icon general">h</span> <a href="">acdg97116@gmail.com</a> <br/>
-                            <span class="icon general">l</span> <a href="">www.acdg97116.com</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="copy">
-                    <p>Copyright &copy;2012 Advocate. All Rights Reserved.</p>
-                </div>
-
+            </form>
+        </div>
+        <div class="widget one_fourth column_last">
+            <h5>Adresse</h5>
+            <div class="location_widget">
+                <p>
+                    Association Culturelle Des Gommiers<br/> Gommiers
+                    <br/> 97116 Pointe-Noire
+                </p>
+                <p>
+                    <span class="icon general">r</span> 0590 981 605 <br/>
+                    <span class="icon general">h</span> <a href="">acdg97116@gmail.com</a> <br/>
+                    <span class="icon general">l</span> <a href="">www.acdg97116.com</a>
+                </p>
             </div>
-        </footer>
+        </div>
+
+        <div class="copy">
+            <p>Copyright &copy;2012 Advocate. All Rights Reserved.</p>
+        </div>
+
+    </div>
+</footer>
 
 </body>
 
