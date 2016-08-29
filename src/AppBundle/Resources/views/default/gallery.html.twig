@@ -1,0 +1,173 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {% include "bannierOther.html.twig" %}
+
+    <div class="page_wrapper">
+
+        <section class="container">
+
+            <!-- Start Gallery -->
+            <div id="gallery" class="page with_sidebar">
+
+                <h1>Gallery</h1>
+
+                <!-- Start Gallery Filters -->
+                <ul class="filter_list">
+                    <li class="current"><a href="javascript:;" class="all-items">All</a></li>
+                    <li><a href="javascript:;" class="animals">Animals</a></li>
+                    <li><a href="javascript:;" class="ocean">Ocean</a></li>
+                    <li><a href="javascript:;" class="wildlife">Wildlife</a></li>
+                    <li><a href="javascript:;" class="nature">Nature</a></li>
+                </ul>
+                <!-- End Gallery Filters -->
+
+                <ul class="gallery_thumbnails four_column">
+                    <li data-type="animals wildlife"><a href="images/content/gallery-large_1.jpg" class="fancybox"
+                                                        title="Photo 1"><img src="images/content/gallery-large_1.jpg"
+                                                                             alt="Photo 1"/></a></li>
+                    <li data-type="nature">
+                        <a href="images/content/gallery-large_2.jpg" class="fancybox" title="Photo 2"><img
+                                    src="images/content/gallery-large_2.jpg" alt="Photo 2"/></a>
+                    </li>
+                    <li data-type="ocean">
+                        <a href="images/content/gallery-large_3.jpg" class="fancybox" title="Photo 3"><img
+                                    src="images/content/gallery-large_3.jpg" alt="Photo 3"/></a>
+                    </li>
+                    <li data-type="ocean">
+                        <a href="images/content/gallery-large_4.jpg" class="fancybox" title="Photo 4"><img
+                                    src="images/content/gallery-large_4.jpg" alt="Photo 4"/></a>
+                    </li>
+                    <li data-type="nature wildlife animals">
+                        <a href="images/content/gallery-large_5.jpg" class="fancybox" title="Photo 5"><img
+                                    src="images/content/gallery-large_5.jpg" alt="Photo 5"/></a>
+                    </li>
+                    <li data-type="ocean">
+                        <a href="images/content/gallery-large_6.jpg" class="fancybox" title="Photo 6"><img
+                                    src="images/content/gallery-large_6.jpg" alt="Photo 6"/></a>
+                    </li>
+                    <li data-type="nature">
+                        <a href="images/content/gallery-large_7.jpg" class="fancybox" title="Photo 7"><img
+                                    src="images/content/gallery-large_7.jpg" alt="Photo 7"/></a>
+                    </li>
+                    <li data-type="nature">
+                        <a href="images/content/gallery-large_8.jpg" class="fancybox" title="Photo 8"><img
+                                    src="images/content/gallery-large_8.jpg" alt="Photo 8"/></a>
+                    </li>
+                    <li data-type="nature">
+                        <a href="images/content/gallery-large_9.jpg" class="fancybox" title="Photo 9"><img
+                                    src="images/content/gallery-large_9.jpg" alt="Photo 9"/></a>
+                    </li>
+                    <li data-type="nature">
+                        <a href="images/content/gallery-large_10.jpg" class="fancybox" title="Photo 10"><img
+                                    src="images/content/gallery-large_10.jpg" alt="Photo 10"/></a>
+                    </li>
+                    <li data-type="wildlife">
+                        <a href="images/content/gallery-large_11.jpg" class="fancybox" title="Photo 11"><img
+                                    src="images/content/gallery-large_11.jpg" alt="Photo 11"/></a>
+                    </li>
+                    <li data-type="wildlife">
+                        <a href="images/content/gallery-large_12.jpg" class="fancybox" title="Photo 12"><img
+                                    src="images/content/gallery-large_12.jpg" alt="Photo 12"/></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- End Gallery -->
+
+            <!-- Start Sidebar -->
+            <aside>
+                <div id="sidebar">
+                    <div class="widget widget_search" id="search-2">
+                        <form action="http://themes.two2twelve.com/wordpress/advocate/" id="searchform" method="get">
+                            <p>
+                                <label for="s">Enter a search term...</label>
+                                <input type="text" id="s" class="text_field" name="s" value="">
+                                <input type="submit" value="Search" id="searchsubmit" class="button white">
+                            </p>
+                        </form>
+                    </div>
+
+                    <div class="widget">
+                        <h5>Recent Posts</h5>
+                        <div class="recent_posts">
+                            <ul>
+                                <li>
+                                    <a href="">Wildlife Protection</a>
+                                </li>
+                                <li>
+                                    <a href="">Give a little, Get a lot</a>
+                                </li>
+                                <li>
+                                    <a href="">Whale Watch</a>
+                                </li>
+                                <li>
+                                    <a href="">Save the Rain Forest</a>
+                                </li>
+                                <li>
+                                    <a href="">Organic Gardening 101</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <h5>Categories</h5>
+                        <div class="widget_categories">
+                            <ul>
+                                <li>
+                                    <a href="">Wildlife <span>15</span></a>
+                                </li>
+                                <li>
+                                    <a href="">Conservation <span>22</span></a>
+                                </li>
+                                <li>
+                                    <a href="">Environmental <span>17</span></a>
+                                </li>
+                                <li>
+                                    <a href="">Volunteer <span>6</span></a>
+                                </li>
+                                <li>
+                                    <a href="">Donate <span>12</span></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <h5>Gallery</h5>
+                        <div class="gallery">
+                            <ul>
+                                <li><img src="images/content/gallery_thumb_1.jpg" alt=""/></li>
+                                <li><img src="images/content/gallery_thumb_2.jpg" alt=""/></li>
+                                <li><img src="images/content/gallery_thumb_3.jpg" alt=""/></li>
+                                <li><img src="images/content/gallery_thumb_4.jpg" alt=""/></li>
+                                <li><img src="images/content/gallery_thumb_5.jpg" alt=""/></li>
+                                <li><img src="images/content/gallery_thumb_6.jpg" alt=""/></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="widget">
+                        <h5>Video</h5>
+                        <div class="video">
+                            <iframe src="http://player.vimeo.com/video/43580167?title=0&amp;byline=0&amp;portrait=0"
+                                    width="215" height="121"></iframe>
+                        </div>
+                        <p>by Revolution</p>
+                    </div>
+
+                </div>
+            </aside>
+            <!-- End Sidebar -->
+
+
+        </section>
+    </div>
+
+
+{% endblock body %}

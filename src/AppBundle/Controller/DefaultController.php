@@ -42,7 +42,17 @@ class DefaultController extends Controller
     /**
      * @Route("/about",name="about")
      */
-    public function AboutAction(){
+    public function AboutAction()
+    {
         return $this->render("@App/default/about.html.twig");
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response[
+     * @Route("/gallery",name="gallery")
+     */
+    public function GalleryAction()
+    {
+        return $this->render("@App/default/gallery.html.twig");
     }
 }
