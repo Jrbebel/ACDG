@@ -162,7 +162,8 @@
 {% endblock body %}
 
 {% block javascripts %}
-    {% javascripts 'bundles/app/js/fancybox/jquery.easing-1.3.pack.js' 'bundles/app/js/fancybox/*.js' %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/app/js/fancybox/jquery.easing-1.3.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/fancybox/jquery.fancybox-1.3.4.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/fancybox/jquery.mousewheel-3.0.4.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/fancybox/jquery.fancybox-1.3.4.pack.js') }}"></script>
 {% endblock javascripts %}
