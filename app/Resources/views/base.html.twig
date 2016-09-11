@@ -39,23 +39,23 @@
             <ul>
                 <li class="current-menu-item"><a href="{{ path("home") }}">Acceuil</a></li>
                 <li><a href="{{ path("about") }}">A propos</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                {#<li><a href="blog.html">Blog</a></li>#}
                 <li><a href="{{ path("evenement") }}">Evènements</a></li>
                 <li>
-                    <a href="{{ path('gallery') }}">Gallerie</a>
-                    <ul>
-                        <li><a href="{{ path('gallery') }}">Gallery 2 Columns</a></li>
-                        <li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>
-                        <li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>
-                        <li>
-                            <a href="#">Gallery With Sidebar &rarr;</a>
-                            <ul>
-                                <li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>
-                                <li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>
-                                <li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a href="{{ path('gallery') }}">Galerie</a>
+                    {#<ul>#}
+                        {#<li><a href="{{ path('gallery') }}">Gallery 2 Columns</a></li>#}
+                        {#<li><a href="gallery_3_columns.html">Gallery 3 Columns</a></li>#}
+                        {#<li><a href="gallery_4_columns.html">Gallery 4 Columns</a></li>#}
+                        {#<li>#}
+                            {#<a href="#">Gallery With Sidebar &rarr;</a>#}
+                            {#<ul>#}
+                                {#<li><a href="gallery_2_columns_sidebar.html">2 Columns With Sidebar</a></li>#}
+                                {#<li><a href="gallery_3_columns_sidebar.html">3 Columns With Sidebar</a></li>#}
+                                {#<li><a href="gallery_4_columns_sidebar.html">4 Columns With Sidebar</a></li>#}
+                            {#</ul>#}
+                        {#</li>#}
+                    {#</ul>#}
                 </li>
                 <li><a href="{{ path("contact") }}">Contact</a></li>
               {#  <li><a href="styles.html">Styles</a></li>#}
@@ -104,14 +104,12 @@
 <footer>
     <div class="container">
         <div class="widget one_fourth">
-            <h2 class="logo">ACDG</h2>
-            <p>ACDG,association culturelle du gommier</p>
+            {#<h2 class="logo">ACDG</h2>#}
+            <p>Association culturelle du gommier</p>
         </div>
         <div class="widget one_fourth">
             <h5>Twitter</h5>
-
             <div class="twitter_stream"></div>
-
         </div>
         <div class="widget one_fourth">
             <h5>Newsletter</h5>
